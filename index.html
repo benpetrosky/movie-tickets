@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Theater</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class ='container'>
+      <h1>Best movie theater ever</h1>
+      <form id="newTicket">
+
+        <div class = 'form-group'>
+          <label for="newMovie">Select a movie:</label>
+          <select class="form-control" id="new-movie">
+          <option selected disabled>Choose here</option>
+            <option>Logan</option>
+            <option>The Boss Baby</option>
+            <option>The Case for Christ</option>
+            <option>Your Name</option>
+          </select>
+        </div>
+
+        <div class = 'form-group'>
+          <label for="newTime">Select an hour:</label>
+          <select class="form-control" id="new-time">
+            <option selected disabled>Choose here</option>
+            <option>Before 5:00</option>
+            <option>After 5:00</option>
+
+          </select>
+        </div>
+
+        <div class = 'form-group'>
+          <label for="newAge">Select Age:</label>
+          <select class="form-control" id= "new-age">
+            <option selected disabled>Choose here</option>
+            <option>4 or younger</option>
+            <option>65 or older</option>
+            <option>5 to 64</option>
+
+
+          </select>
+        </div>
+
+      <button type="submit" class="btn">Calculate Cost</button>
+      </form>
+
+      <div id="cost">
+
+      </div>
+
+    </div>
+  </body>
+</html>
