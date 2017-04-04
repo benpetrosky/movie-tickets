@@ -26,9 +26,9 @@ Ticket.prototype.cost = function() {
     total += 20;
   }
 
-  return total;
+  return (this.time + " you are going to see " + this.movie + ".  Your ticket cost is " + total + " million dollars " + ".")
 
-  }
+    }
 
 
 $(function() {
@@ -38,9 +38,15 @@ $(function() {
     var newMovie = $("#new-movie").val();
     var newTime = $("#new-time").val();
     var newAge = $("#new-age").val();
-    console.log(newMovie, newTime, newAge);
+
 
     var newTicket = new Ticket (newMovie, newTime, newAge);
+
+
+    $("ul#ticket").append("<li><span>" + newTicket.cost() + "</span></li>");
+
+    $("#cost").show();
+
 
 
     console.log(newTicket.cost());
