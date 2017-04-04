@@ -3,7 +3,7 @@ function Ticket(movie, time, age) {
   this.time = time;
   this.age = age;
 
-
+}
 
 Ticket.prototype.cost = function() {
   var total = 0;
@@ -15,20 +15,20 @@ Ticket.prototype.cost = function() {
   else if (this.age === "65 or older")
       {
       total += 2;
+
       }
 
-  else if (this.time === "Before 5:00" && this.age === "5 to 64")
+  if (this.time === "Before 5:00" && this.age === "5 to 64")
   {
-     total += 5;
+     total += 10;
   }
-  else {
-    total += 100;
+  else if (this.time === "After 5:00" && this.age === "5 to 64") {
+    total += 20;
   }
 
   return total;
 
   }
-};
 
 
 $(function() {
@@ -38,9 +38,11 @@ $(function() {
     var newMovie = $("#new-movie").val();
     var newTime = $("#new-time").val();
     var newAge = $("#new-age").val();
+    console.log(newMovie, newTime, newAge);
 
     var newTicket = new Ticket (newMovie, newTime, newAge);
 
-    console.log(newTicket);
+
+    console.log(newTicket.cost());
 });
 });
